@@ -10,26 +10,27 @@ const STORE = {
     },
     QA: [
         {
-            question: 'What is Google Cloud Platform (GCP)?',
-            answers: ['A suite that includes Youtube, Gmail and Google Search',
-                      'A Gooogle service for deploying managed web applications', 
-                      'The world’s number one cloud computing platform', 
-                      'A suite of enterprise cloud computing services that runs on Google\'s'],
-            correct: 3
+            question: 'You are creating a model to predict housing prices. Due to budget constraints, you must run it on a single resource-constrained virtual machine. Which learning algorithm should you use?',
+            answers: ['Linear regression',
+                      'Logistic classification', 
+                      'Recurrent neural network', 
+                      'Feedforward neural network'],
+            correct: 0
         }, 
         {
-            question: 'What Is GCP’s Compute Engine Useful for?',
-            answers: ['Applying a lockstep columnar traversal algorithm to massive datasets',
-                      'Ingesting and processing streaming data from IoT devices', 
-                      'Managing noSQL datastores', 'On-demand virtual machines (VMs)'],
+            question: 'You are building new real-time data warehouse for your company and will use Google BigQuery streaming inserts. There is no guarantee that data will only be sent in once but you do have a unique ID for each row of data and an event timestamp. You want to ensure that duplicates are not included while interactively querying data. Which query type should you use?',
+            answers: ['Include ORDER BY DESK on timestamp column and LIMIT to 1',
+                      'Use GROUP BY on the unique ID column and timestamp column and SUM on the values.', 
+                      'Use the LAG window function with PARTITION by unique ID along with WHERE LAG IS NOT NULL.', 
+                      'Use the ROW_NUMBER window function with PARTITION by unique ID along with WHERE row equals 1.'],
             correct: 3
         },
-        {  question: 'On which Apache programming model is Dataflow based?',
-            answers: ['Apache Hive',
-                      'Apache Kafka', 
-                      'Apache Pig', 
-                      'Apache Beam'],
-            correct: 3
+        {  question: 'Your company is using WHILECARD tables to query data across multiple tables with similar names. The SQL statement is currently failing with the following error: # Syntax error : Expected end of statement but got \'-\' at [4:11] SELECT age FROM bigquery-public-data.noaa_gsod.gsod WHERE age != 99        AND_TABLE_SUFFIX = \'1929\' ORDER BY age DESC        Which table name will make the SQL statement work correctly?',
+            answers: ['\'bigquery-public-data.noaa_gsod.gsod\'',
+                      'bigquery-public-data.noaa_gsod.gsod*', 
+                      '\'bigquery-public-data.noaa_gsod.gsod\'*', 
+                      '\'bigquery-public-data.noaa_gsod.gsod*\''],
+            correct: 1
         }, 
         {
             question: 'Which are adjusted on each epoch in a machine learning training session?',
